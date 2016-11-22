@@ -29,7 +29,6 @@ window.onload = function() {
 	var iCurrent = 0;
 	var target = 0;
 	var timeId = null;
-	// console.log(picWrap.offsetTop);
 	navList[iCurrent].style.background = "#FF493C";
 	timeId = interval();
 	for(var j = 0;j < navList.length;j++) {
@@ -47,7 +46,6 @@ window.onload = function() {
 		for(var i = 0;i < navList.length;i++){
 			navList[i].style.background = "#2F0E0B";
 		}
-		// console.log(tag);
 		navList[tag].style.background = "#FF493C";
 	}
 
@@ -71,34 +69,36 @@ window.onload = function() {
 	var mask = document.getElementsByClassName('mask');
 	var picSrc = ['img/P_01.jpg','img/P_02.jpg','img/P_03.jpg','img/P_04.jpg','img/P_05.jpg','img/P_06.jpg','img/P_07.jpg','img/P_08.jpg','img/P_09.jpg','img/P_010.jpg','img/P_011.jpg','img/P_012.jpg','img/P_013.jpg','img/P_014.jpg','img/P_015.jpg'];
 	var pIndex = 0;
-	// var isGetMore = true;
-	// while(isGetMore){
-	// 	var scrollT = document.body.scrollTop || document.documentElement.scrollTop;
-	// 	console.log(scrollT + document.body.offsetHeight,ul.offsetHeight+ul.offsetTop);
-	// 	var mi = min();
-	// 	if(scrollT + document.body.offsetHeight >= lis[mi].offsetHeight+ul.offsetTop && pIndex < picSrc.length){
-	// 		add(lis[mi],picSrc[pIndex]);
-	// 		pIndex++;
-	// 		for(var i = 0;i < liItem.length;i++){
-	// 			liItem[i].tag = i;
-	// 			liItem[i].onmouseenter = function(){
-	// 				mask[this.tag].style.display = "flex";
-	// 			};
-	// 			liItem[i].onmouseleave = function(){
-	// 				mask[this.tag].style.display = "none";
-	// 			};
-	// 		}
-	// 	}
-	// }
-	for(var i = 0;i < liItem.length;i++){
-		liItem[i].tag = i;
-		liItem[i].onmouseenter = function(){
-			mask[this.tag].style.display = "flex";
-		};
-		liItem[i].onmouseleave = function(){
-			mask[this.tag].style.display = "none";
-		};
+	var isGetMore = true;
+	while(isGetMore){
+		var scrollT = document.body.scrollTop || document.documentElement.scrollTop;
+		console.log(scrollT + document.body.offsetHeight,ul.offsetHeight+ul.offsetTop);
+		var mi = min();
+		if(scrollT + document.body.offsetHeight >= lis[mi].offsetHeight+ul.offsetTop && pIndex < picSrc.length){
+			add(lis[mi],picSrc[pIndex]);
+			pIndex++;
+			for(var i = 0;i < liItem.length;i++){
+				liItem[i].tag = i;
+				liItem[i].onmouseenter = function(){
+					mask[this.tag].style.display = "flex";
+				};
+				liItem[i].onmouseleave = function(){
+					mask[this.tag].style.display = "none";
+				};
+			}
+		}else{
+			isGetMore = false;
+		}
 	}
+	// for(var i = 0;i < liItem.length;i++){
+	// 	liItem[i].tag = i;
+	// 	liItem[i].onmouseenter = function(){
+	// 		mask[this.tag].style.display = "flex";
+	// 	};
+	// 	liItem[i].onmouseleave = function(){
+	// 		mask[this.tag].style.display = "none";
+	// 	};
+	// }
 	//达到底部加载
 	
 	window.onscroll = function(){

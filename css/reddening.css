@@ -45,15 +45,11 @@
 }
 #flow-wrap li{
 	position: relative;
-	/*overflow: hidden;*/
 	display: inline-block;
 	vertical-align: top;
-	/*margin-bottom: 6px;*/
 	width: 32%;
-	/*height: 300px;*/
 	list-style: none;
 	transition: all 1s;
-	/*background: red;*/
 }
 .flow-item div{
 	position: relative;
