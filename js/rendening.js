@@ -69,36 +69,36 @@ window.onload = function() {
 	var mask = document.getElementsByClassName('mask');
 	var picSrc = ['img/P_01.jpg','img/P_02.jpg','img/P_03.jpg','img/P_04.jpg','img/P_05.jpg','img/P_06.jpg','img/P_07.jpg','img/P_08.jpg','img/P_09.jpg','img/P_010.jpg','img/P_011.jpg','img/P_012.jpg','img/P_013.jpg','img/P_014.jpg','img/P_015.jpg'];
 	var pIndex = 0;
-	var isGetMore = true;
-	while(isGetMore){
-		var scrollT = document.body.scrollTop || document.documentElement.scrollTop;
-		console.log(scrollT + document.body.offsetHeight,ul.offsetHeight+ul.offsetTop);
-		var mi = min();
-		if(scrollT + document.body.offsetHeight >= lis[mi].offsetHeight+ul.offsetTop && pIndex < picSrc.length){
-			add(lis[mi],picSrc[pIndex]);
-			pIndex++;
-			for(var i = 0;i < liItem.length;i++){
-				liItem[i].tag = i;
-				liItem[i].onmouseenter = function(){
-					mask[this.tag].style.display = "flex";
-				};
-				liItem[i].onmouseleave = function(){
-					mask[this.tag].style.display = "none";
-				};
-			}
-		}else{
-			isGetMore = false;
-		}
-	}
-	// for(var i = 0;i < liItem.length;i++){
-	// 	liItem[i].tag = i;
-	// 	liItem[i].onmouseenter = function(){
-	// 		mask[this.tag].style.display = "flex";
-	// 	};
-	// 	liItem[i].onmouseleave = function(){
-	// 		mask[this.tag].style.display = "none";
-	// 	};
+	// var isGetMore = true;
+	// while(isGetMore){
+	// 	var scrollT = document.body.scrollTop || document.documentElement.scrollTop;
+	// 	console.log(scrollT + document.body.offsetHeight,ul.offsetHeight+ul.offsetTop);
+	// 	var mi = min();
+	// 	if(scrollT + document.body.offsetHeight >= lis[mi].offsetHeight+ul.offsetTop && pIndex < picSrc.length){
+	// 		add(lis[mi],picSrc[pIndex]);
+	// 		pIndex++;
+	// 		for(var i = 0;i < liItem.length;i++){
+	// 			liItem[i].tag = i;
+	// 			liItem[i].onmouseenter = function(){
+	// 				mask[this.tag].style.display = "flex";
+	// 			};
+	// 			liItem[i].onmouseleave = function(){
+	// 				mask[this.tag].style.display = "none";
+	// 			};
+	// 		}
+	// 	}else{
+	// 		isGetMore = false;
+	// 	}
 	// }
+	for(var i = 0;i < liItem.length;i++){
+		liItem[i].tag = i;
+		liItem[i].onmouseenter = function(){
+			mask[this.tag].style.display = "flex";
+		};
+		liItem[i].onmouseleave = function(){
+			mask[this.tag].style.display = "none";
+		};
+	}
 	//达到底部加载
 	
 	window.onscroll = function(){
@@ -131,17 +131,26 @@ window.onload = function() {
 		return index;
 	}
 	//添加一张图片
+	
 	function add(obj,src){
-		var div = document.createElement('div');
+		var isAdd = true;
 		var img = document.createElement('img');
+		img.src = src;
+		var div = document.createElement('div');
 		var span = document.createElement('span');
 		div.className = 'li-item';
-		img.src = src;
 		span.className = 'mask';
 		span.innerHTML = "<strong>图片标题</strong>"
+		// while(isAdd){
+		// 	img.onload = function(){
+		// 		isAdd = false;
+		// 	};	
+		// }
 		div.appendChild(img);
 		div.appendChild(span);
 		obj.appendChild(div);
+		
+		
 	}
 	
 };
