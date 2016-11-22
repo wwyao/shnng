@@ -5,7 +5,8 @@ window.onload = function() {
 	var footer = document.querySelector('#footer');
 	//内容框
 	var divs = document.querySelectorAll('.section>div');
-	var sh = document.body.offsetHeight - 70;
+	var bodyOffsetheight = document.body.offsetHeight || document.documentElement.offsetHeight;
+	var sh = bodyOffsetheight - 70;
 	for(var i = 0;i < sections.length;i++) {
 		sections[i].style.height = sh + 'px';
 	}
@@ -73,7 +74,6 @@ window.onload = function() {
 	};
 	function initOpacity(array){
 		for(var i = 0;i < array.length;i++){
-			// array[i].style.opacity = '0';
 			attributeAnim(array[i],{opacity:0});
 		}
 	}
