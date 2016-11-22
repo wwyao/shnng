@@ -90,14 +90,29 @@ window.onload = function() {
 	// 		isGetMore = false;
 	// 	}
 	// }
-	for(var i = 0;i < liItem.length;i++){
-		liItem[i].tag = i;
-		liItem[i].onmouseenter = function(){
-			mask[this.tag].style.display = "flex";
-		};
-		liItem[i].onmouseleave = function(){
-			mask[this.tag].style.display = "none";
-		};
+	// for(var i = 0;i < liItem.length;i++){
+	// 	liItem[i].tag = i;
+	// 	liItem[i].onmouseenter = function(){
+	// 		mask[this.tag].style.display = "flex";
+	// 	};
+	// 	liItem[i].onmouseleave = function(){
+	// 		mask[this.tag].style.display = "none";
+	// 	};
+	// }
+
+	for (var i = 0;i < 9; i++) {
+		var mi = min();
+		add(lis[mi],picSrc[pIndex]);
+		pIndex++;
+		for(var i = 0;i < liItem.length;i++){
+			liItem[i].tag = i;
+			liItem[i].onmouseenter = function(){
+				mask[this.tag].style.display = "flex";
+			};
+			liItem[i].onmouseleave = function(){
+				mask[this.tag].style.display = "none";
+			};
+		}
 	}
 	//达到底部加载
 	
@@ -117,8 +132,6 @@ window.onload = function() {
 					mask[this.tag].style.display = "none";
 				};
 			}
-		}else{
-			isGetMore = false;
 		}
 	};
 	function min(){
