@@ -1,0 +1,154 @@
+body{
+	background: #Fff;
+}
+#main{
+	/*padding-top: 130px;*/
+	text-align: center;
+}
+#main .slide-show{
+	position: relative;
+	display: inline-block;
+	margin:60px auto 100px;
+	text-align: left;
+}
+.slide-show .slide-item{
+	margin: 0 auto;
+}
+.slide-item img:nth-child(1){
+	width: 100%;
+}
+.slide-item div{
+	padding:2% 2% 0;
+	overflow: hidden;
+	position: absolute;
+	bottom: 2px;
+	width: 96%;
+	height: 15%;
+	background: rgba(0,0,0,0.4);
+	color: #fff;
+	font-size: 12px;
+}
+.slide-item div p{
+	line-height: 16px;
+	color: #747476;
+}
+.slide-item div p:nth-child(1){
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+.slide-show .play-btn{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	margin-left: -3.5%;
+	width: 7%;
+	height: 10%;
+}
+#main .content{
+	background: #f5f5f5;
+}
+#main ul{
+	position: relative;
+	margin: 0px auto 70px;
+	width: 100%;
+	color: #BFBFBF;
+}
+.li-item{
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	height: 240px;
+	list-style: none;
+	border-bottom: 2px solid #C7C7C7;
+	text-align: center;
+	transition: all 1s;
+}
+.li-item span{
+	position: absolute;
+	left: 2%;
+	margin: 10px 0;
+	display: inline-block;
+	width: 47%;
+	height: 92%;
+}
+.li-item span:nth-child(even){
+	left: 51%;
+}
+.li-item span img{
+	width: 100%;
+	height: 100%;
+}
+.li-item div{
+	position: absolute;
+	left:55%;
+	top: 40px;
+	width: 37%;
+	text-align: left;
+}
+.li-item div:nth-child(odd){
+	left:8%;
+}
+.li-item div p:nth-child(1){
+	margin-bottom: 20px;
+	font-size: 25px
+}
+.li-item div p:nth-child(2){
+	line-height: 20px;
+}
+.li-item:nth-child(even) div p:nth-child(1){
+	text-align: right;
+}
+.li-item span .play-btn{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -25px;
+	margin-left: -20px;
+	width: 50px;
+	height: 40px;
+}
+
+@media only screen and (min-width: 992px){
+	.slide-item img:nth-child(1){
+		width: 992px;
+	}
+	#main ul{
+		width: 992px;
+	}
+}
+@media only screen and (max-width: 768px){
+	.slide-item div{
+		height: 20%;
+	}
+	.slide-item div p{
+		line-height: 12px;
+	}
+	.slide-item div p:nth-child(1){
+		font-size: 14px;
+		margin-bottom: 4px;
+	}
+	.li-item span,.li-item span:nth-child(even){
+		left:10%;
+		width:80%;
+		height:60%;
+	}
+	.li-item div{
+		left: 10%;
+		top:170px;
+		width: 80%;
+	}
+	.li-item div:nth-child(odd){
+		left:10%;
+	}
+	.li-item div p:nth-child(1){
+		margin-bottom: 5px;
+		font-size: 16px
+	}
+	.li-item div p:nth-child(2){
+		font-size: 12px;
+		line-height: 14px;
+	}
+	.li-item:nth-child(even) div p:nth-child(1){
+		text-align: left;
+	}
+}

@@ -1,0 +1,165 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	height: 100%;
+	background: #F5F5F5;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+#main{
+	padding: 100px 0px 0px;
+}
+.title{
+	margin:0 auto;
+	width: 50%;
+	height: 40px;
+	background: url(../img/line_yellow.png) center;
+	background-repeat: repeat-x;
+	font-size: 20px;
+	text-align: center;
+	line-height: 40px;
+}
+.title span{
+	padding:5px;
+	background: #F5F5F5;
+}
+/*导航栏*/
+#nav{
+	position: fixed;
+	top: 0;
+	z-index: 20000;
+	width: 100%;
+	height: 70px;
+	background: #FEFEFE;
+	border-bottom: 1px solid #BDC0A2;
+	box-shadow: 0 1px 5px 0px #D6D6D6;
+	line-height: 70px;
+}
+#nav .logo{
+	margin-left: 10%;
+	vertical-align: middle;
+}
+#nav ul{ 
+	position: absolute;
+	right:5%;
+	display: inline-block;
+	height: 100%;
+}
+#nav ul li{
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 100%;
+	line-height: 70px;
+	text-align: center;
+	list-style: none;
+	transition: all 1.5s;
+}
+#nav ul li:hover{
+	opacity: 0.5;
+	background: #C5D609;
+}
+#nav ul li a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+#nav .menu{
+	position: absolute;
+	right: 1%;
+	top:20px;
+	display: none;
+	width: 30px;
+}
+.active{
+	background: #C5D609;
+}
+/*footer*/
+#footer{
+	background: #FFFFFF;
+}
+#footer .contact{
+	padding: 70px 0px;
+	margin: 0 auto;
+	width: 100%;
+}
+.contact p{
+	padding-bottom: 5px;
+	color: #8F8F8F;
+	text-align: center;
+}
+#footer>p{
+	width: 100%;
+	height: 60px;
+	background: #A5A5A5;
+	border-top: 3px solid #C5D609;
+	color: #fff;
+	text-align: center;
+	line-height: 60px;
+}
+.title .title-span-bg{
+	background: #fff;
+}
+
+@media only screen and (min-width: 992px){
+	.title{
+		width: 470px;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 992px){
+	#nav .logo{
+		margin-left: 6%;
+	}
+	#nav ul{ 
+		right:5%;
+	}
+	#nav ul li{
+		top: -2px;
+		width: 70px;
+		font-size: 12px;
+	}
+}
+@media only screen and (max-width: 768px){
+	.title{
+		font-size: 14px;
+	}
+	#nav .logo{
+		padding:2%;
+		width:36%;
+		margin-left: 30%;
+	}
+	#nav ul{ 
+		right:0;
+		top: 70px;
+		display: none;
+		width: 100%;
+		height:180px;
+		/*opacity: 0.8;*/
+		background: #ffffff;
+		
+	}
+	#nav ul li{
+		display: block;
+		width: 100%;
+		height: 28px;
+		line-height: 30px;
+		font-size: 16px;
+		border: 1px dotted rgba(0,0,0,0.2);
+	}
+	#nav ul li a{
+		color: #34373B;
+	}
+	#nav ul li:hover{
+		background: rgba(0,0,0,0.1);
+	}
+	#nav .menu{
+		display: inline-block;
+	}
+	.active{
+		background: rgba(0,0,0,0.3);
+	}
+}

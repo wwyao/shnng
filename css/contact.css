@@ -1,0 +1,14 @@
+#main{
+	padding-bottom: 90%;
+	text-align: center;
+	background:#F5F5F5 url('../img/contact_bg.jpg') no-repeat center bottom;
+}
+#main img{
+	margin-bottom: 60px;
+}
+#main div p{
+	margin-bottom: 10px;
+	color: #666464;
+	font-size: 14px;
+	line-height: 16px;
+}

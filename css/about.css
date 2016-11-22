@@ -1,0 +1,25 @@
+#main{
+	margin-bottom: 180px;
+	text-align: center;
+}
+#main img{
+	margin-bottom: 60px; 
+}
+
+#main div{
+	margin: 30px auto;
+	width: 60%;
+	text-align: left;
+	
+}
+#main div p{
+	margin-bottom: 40px;
+	color: #7E7E7E;
+	font-size: 14px;
+	line-height: 30px;
+}
+@media only screen and (max-width: 768px){
+	#main div{
+		width: 80%;
+	}
+}

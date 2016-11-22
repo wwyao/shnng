@@ -1,0 +1,144 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#main{
+	position: relative;
+}
+#main .title{
+	margin-bottom: 50px;
+}
+#main .section{
+	position: relative;
+	overflow: hidden;
+	font-size: 14px
+}
+.section div{
+	position: absolute;
+	z-index: 100;
+	width: 40%;
+	opacity: 0;
+}
+.section div h2{
+	display: inline-block;
+	padding: 7px 5px 4px;
+	margin-bottom: 20px;
+	background: #C5D609;
+	font-size: 20px;
+}
+.section>img{
+	width:36%;
+}
+.section div p{
+	margin-bottom: 30px;
+	line-height: 30px;
+}
+#main .section:nth-child(2){
+	background: url(../img/BIM-bg1.png);
+	background-size: cover;
+}
+.section:nth-child(2) div img{
+	width: 26%;
+}
+.section:nth-child(2) div{
+	left: 20%;
+	top: 30%;
+	opacity: 1;
+}
+.section:nth-child(2)>img{
+	position: absolute;
+	right: 0 ;
+	bottom: 0;
+}
+#main .section:nth-child(3){
+	background: url(../img/BIM-bg2.png);
+	background-size: cover;
+}
+.section:nth-child(3) div{
+	left: 20%;
+	top: 30%;
+}
+.section:nth-child(3)>img{
+	position: absolute;
+	right: 4.6%;
+	top: 0;
+}
+#main .section:nth-child(4){
+	background: url(../img/BIM-bg3.png);
+	background-size: cover;
+}
+.section:nth-child(4) div{
+	right: 20%;
+	top: 30%;
+}
+.section:nth-child(4)>img{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+#main .section:nth-child(5){
+	background: red url(../img/BIM-bg4.png);
+	background-size: cover;
+}
+.section:nth-child(5) div{
+	z-index: 100;
+	left: 38%;
+	top: 20%;
+}
+.section:nth-child(5)>img:nth-child(1){
+	position: absolute;
+	left: 4.7%;
+	top: 0;
+}
+.section:nth-child(5)>img:nth-child(3){
+	position: absolute;
+	right: 0px;
+	bottom: 0;
+}
+#main .section:nth-child(6){
+	background: url(../img/BIM-bg5.png);
+	background-size: cover;
+}
+.section:nth-child(6) div{
+	left: 20%;
+	top: 30%;
+	width: 25%;
+}
+.section:nth-child(6)>img{
+	position: absolute;
+	right: 5.1%;
+	top: 0;
+}
+.top{
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	margin-left: -25px;
+}
+@media only screen and (max-width: 768px){
+	.section div{
+		width: 80%;
+	}
+	.section:nth-child(2) div{
+		left: 10%;
+		top: 20%;
+	}
+	.section:nth-child(3) div{
+		left: 12%;
+		top: 28%;
+	}
+	.section:nth-child(4) div{
+		left: 10%;
+		top: 12%;
+	}
+	.section:nth-child(5) div{
+		left: 12%;
+		top: 20%;
+	}
+	.section:nth-child(6) div{
+		left: 10%;
+		top: 30%;
+		width:80%;
+	}
+}

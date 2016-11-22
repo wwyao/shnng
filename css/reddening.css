@@ -1,0 +1,92 @@
+#main{
+	position: relative;
+	text-align: center;
+}
+#slide-show{
+	position: relative;
+	overflow: hidden;
+	margin: 40px auto;
+	width: 96%;
+	text-align: left;
+}
+#pic-wrap{
+	width: 2000%;
+}
+.pic{
+	display: inline-block;
+	width: 5%;
+}
+.pic img{
+	width: 100%;
+	font-size: 0px;
+}
+.pic-nav{
+	position: absolute;
+	z-index: 50;
+	right: 50%;
+	bottom: 20px;
+	list-style: none;
+}
+.pic-nav-list{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: #2F0E0B;
+	border:1px solid #D23E31;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 20px;
+	color:#fff;
+	cursor:pointer;
+}
+#flow-wrap{
+	margin: 0 auto 100px;
+	width: 95%;
+}
+#flow-wrap li{
+	position: relative;
+	/*overflow: hidden;*/
+	display: inline-block;
+	vertical-align: top;
+	/*margin-bottom: 6px;*/
+	width: 32%;
+	/*height: 300px;*/
+	list-style: none;
+	transition: all 1s;
+	/*background: red;*/
+}
+.flow-item div{
+	position: relative;
+	margin-bottom: 1px;
+	width:100%;
+}
+.flow-item div img{
+	width: 100%;
+}
+.flow-item div span{
+	position: absolute;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	top:10%;
+	left:10%;
+	width: 80%;
+	height:80%;
+	background: blue url(../img/magnifier.png) no-repeat center 25%;
+	opacity: 0.5;
+	color: #fff;
+}
+@media only screen and (min-width: 992px){
+	#slide-show{
+		width: 992px;
+	}
+	#flow-wrap{
+		width: 950px;
+	}
+}
+@media only screen and (max-width: 768px){
+	#flow-wrap>li{
+		height: 180px;
+	}
+}
