@@ -129,8 +129,8 @@ a{
 	}
 	#nav .logo{
 		padding:2%;
-		width:36%;
-		margin-left: 30%;
+		/*width:36%;*/
+		margin-left: 25%;
 	}
 	#nav ul{ 
 		right:0;
