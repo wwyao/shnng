@@ -57,7 +57,9 @@
 	width:100%;
 }
 .flow-item div img{
+	padding:1px;
 	width: 100%;
+	border-radius: 10px;
 }
 .flow-item div span{
 	position: absolute;
@@ -72,6 +74,7 @@
 	background: blue url(../img/magnifier.png) no-repeat center 25%;
 	opacity: 0.5;
 	color: #fff;
+	border-radius: 10px;
 }
 @media only screen and (min-width: 992px){
 	#slide-show{
