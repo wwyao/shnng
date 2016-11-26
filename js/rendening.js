@@ -2,27 +2,6 @@ window.onload = function() {
 
 	//导航栏
 	navClick();
-	// var menu = document.querySelector('.menu');
-	// var navUl = document.querySelector('#nav ul');
-	// var navLis = document.querySelector('#nav ul li');
-	// var isOpen = false;
-	// menu.onclick = function(){
-	// 	if (!isOpen) {
-	// 		isOpen = true;
-	// 		menu.src = 'img/menu2.png';
-	// 		navUl.style.display = "block";
-	// 	}else{
-	// 		isOpen = false;
-	// 		menu.src = 'img/menu1.png';
-	// 		navUl.style.display = "none";
-	// 	}
-		
-	// };
-	// for(var i = 0;i < navLis.length;i++){
-	// 	navLis.onclick = function(){
-	// 		navUl.style.display = 'none';
-	// 	};
-	// }
 	//轮播图
 	var picWrap = document.getElementById('pic-wrap');
 	var pic = document.getElementsByClassName('pic');
@@ -69,7 +48,18 @@ window.onload = function() {
 	var mask = document.getElementsByClassName('mask');
 	var picSrc = ['img/P_01.jpg','img/P_02.jpg','img/P_03.jpg','img/P_04.jpg','img/P_05.jpg','img/P_06.jpg','img/P_07.jpg','img/P_08.jpg','img/P_09.jpg','img/P_010.jpg','img/P_011.jpg','img/P_012.jpg','img/P_013.jpg','img/P_014.jpg','img/P_015.jpg'];
 	var pIndex = 0;
-	controlMask();
+	// controlMask();
+	for(var i = 0;i < 3;i++){
+		var count = pIndex;
+		var newLi = document.createElement('li');
+		newLi.className = 'flow-item';
+		while(pIndex - count < 3){
+			add(newLi,picSrc[pIndex]);
+			pIndex++;
+		}
+		ul.appendChild(newLi);
+		controlMask();
+	}
 	//达到底部加载
 	window.onscroll = function(){
 		var scrollT = document.body.scrollTop || document.documentElement.scrollTop;
