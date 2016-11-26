@@ -1,4 +1,5 @@
-window.onload = function(){
+//导航栏点击事件
+function navClick(){
 	var menu = document.querySelector('.menu');
 	menu.isOpen = false;
 	var ul = document.querySelector('#nav ul');
@@ -20,4 +21,4 @@ window.onload = function(){
 			ul.style.display = 'none';
 		};
 	}
-};
+}

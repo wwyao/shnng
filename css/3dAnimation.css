@@ -118,14 +118,14 @@ body{
 }
 @media only screen and (max-width: 768px){
 	.slide-item div{
-		height: 20%;
+		height: 28%;
 	}
 	.slide-item div p{
-		line-height: 12px;
+		line-height: 10px;
 	}
 	.slide-item div p:nth-child(1){
 		font-size: 14px;
-		margin-bottom: 4px;
+		margin-bottom: 2px;
 	}
 	.li-item span,.li-item span:nth-child(even){
 		left:10%;

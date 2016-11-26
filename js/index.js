@@ -15,25 +15,5 @@ window.onload = function(){
 		};
 	}
 	//导航栏
-	var menu = document.querySelector('.menu');
-	var ul = document.querySelector('#nav ul');
-	var lis = document.querySelector('#nav ul li');
-	var isOpen = false;
-	menu.onclick = function(){
-		if (!isOpen) {
-			isOpen = true;
-			menu.src = 'img/menu2.png';
-			ul.style.display = "block";
-		}else{
-			isOpen = false;
-			menu.src = 'img/menu1.png';
-			ul.style.display = "none";
-		}
-		
-	};
-	for(var i = 0;i < lis.length;i++){
-		lis.onclick = function(){
-			ul.style.display = 'none';
-		};
-	}
+	navClick();
 };

@@ -3,6 +3,9 @@ window.onload = function() {
 	var sections = document.querySelectorAll('.section');
 	var topBtn = document.querySelector('.top');
 	var footer = document.querySelector('#footer');
+
+	//导航栏
+	navClick();
 	//内容框
 	var divs = document.querySelectorAll('.section>div');
 	var bodyOffsetheight = document.body.offsetHeight || document.documentElement.offsetHeight;
@@ -76,27 +79,5 @@ window.onload = function() {
 		for(var i = 0;i < array.length;i++){
 			attributeAnim(array[i],{opacity:0});
 		}
-	}
-	//导航栏
-	var menu = document.querySelector('.menu');
-	var navUl = document.querySelector('#nav ul');
-	var navLis = document.querySelector('#nav ul li');
-	var isOpen = false;
-	menu.onclick = function(){
-		if (!isOpen) {
-			isOpen = true;
-			menu.src = 'img/menu2.png';
-			navUl.style.display = "block";
-		}else{
-			isOpen = false;
-			menu.src = 'img/menu1.png';
-			navUl.style.display = "none";
-		}
-		
-	};
-	for(var i = 0;i < navLis.length;i++){
-		navLis.onclick = function(){
-			navUl.style.display = 'none';
-		};
 	}
 };
